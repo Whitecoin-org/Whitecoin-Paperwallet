@@ -2246,6 +2246,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			case 7: // hybrid
 
 
+
 				var len = (s.length - 2) / 2;
 				var xHex = s.substr(2, len);
 				var yHex = s.substr(len + 2, len);
@@ -6214,6 +6215,7 @@ Bitcoin.Util = {
 
 			function blockxor(S, Si, D, Di, len) {
 				var i = len >> 6;
+
 				while (i--) {
 					D[Di++] ^= S[Si++]; D[Di++] ^= S[Si++];
 					D[Di++] ^= S[Si++]; D[Di++] ^= S[Si++];
@@ -6719,6 +6721,7 @@ body, html { height: 99%; }
 						</div>
 					</div>
 				</div>
+                <div style="clear:both;"></div>
 			</div>
 			
 			<div id="vanityarea" class="walletarea">
@@ -7494,6 +7497,7 @@ ninja.runSerialized = function (functions, onComplete) {
 
 ninja.forSerialized = function (initial, max, whatToDo, onComplete) {
 	onComplete = onComplete || function () { };
+
 
 	if (initial === max) { onComplete(); }
 	else {
